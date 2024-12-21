@@ -1,0 +1,84 @@
+
+> Task :test
+
+CashCardApplicationTests > shouldReturnACashCardWhenDataIsSaved() PASSED
+
+CashCardApplicationTests > shouldCreateANewCashCard() FAILED
+    org.opentest4j.AssertionFailedError: 
+    expected: 201 CREATED
+     but was: 500 INTERNAL_SERVER_ERROR
+        at java.base@17.0.7/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+        at java.base@17.0.7/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+        at java.base@17.0.7/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+        at java.base@17.0.7/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+        at app//example.cashcard.CashCardApplicationTests.shouldCreateANewCashCard(CashCardApplicationTests.java:46)
+
+CashCardApplicationTests > shouldNotReturnACashCardWithAnUnknownId() PASSED
+
+CashCardJsonTest > cashCardSerializationTest() PASSED
+
+CashCardJsonTest > cashCardDeserializationTest() PASSED
+
+2024-12-08T20:48:09.362Z  INFO 23744 --- [ionShutdownHook] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:f62b96c3-7d55-42a8-b884-af71ad79b171;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+
+> Task :test FAILED
+
+5 tests completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///home/eduk8s/exercises/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 6s
+5 actionable tasks: 2 executed, 3 up-to-date
+[~/exercises] $ ./gradlew test
+The message received from the daemon indicates that the daemon has disappeared.
+Build request sent: Build{id=c77fb4d0-d1cd-47a9-befb-32d98777b680, currentDir=/home/eduk8s/exercises}
+Attempting to read last messages from the daemon log...
+Daemon pid: 22957
+  log file: /home/eduk8s/.gradle/daemon/8.3/daemon-22957.out.log
+----- Last  20 lines from daemon log file - daemon-22957.out.log -----
+2024-12-08T20:49:31.207+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=c77fb4d0-d1cd-47a9-befb-32d98777b680, currentDir=/home/eduk8s/exercises}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:46791 to /127.0.0.1:60800] after 1.0 minutes of idle
+2024-12-08T20:49:31.207+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [3d78fc6b-a3de-4257-8179-23ea5562b10f port:46791, addresses:[localhost/127.0.0.1]]
+2024-12-08T20:49:31.207+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [3d78fc6b-a3de-4257-8179-23ea5562b10f port:46791, addresses:[localhost/127.0.0.1]]
+2024-12-08T20:49:31.207+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-12-08T20:49:31.209+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-12-08T20:49:31.209+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-12-08T20:49:31.210+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2024-12-08T20:49:31.211+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-12-08T20:49:31.211+0000 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=c77fb4d0-d1cd-47a9-befb-32d98777b680, currentDir=/home/eduk8s/exercises}. Dispatching build started information...
+2024-12-08T20:49:31.211+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 283: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@1ae9d07f
+2024-12-08T20:49:31.215+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [PATH, HISTCONTROL, SUPERVISOR_ENABLED, INGRESS_PORT_SUFFIX, INGRESS_DOMAIN, KUBECTL_VERSION, SPR_BRASB_W10_S3245_PORT_80_TCP, INGRESS_PORT, SESSION_URL, SPR_BRASB_W10_S3246_PORT_80_TCP, FBR, ENABLE_REGISTRY, TERMINAL_HOME, PWD, WORKSHOP_DIR, ENABLE_CONSOLE_OCTANT, SPR_BRASB_W10_S3246_SERVICE_PORT, ENABLE_GIT, LESSOPEN, TRAINING_PORTAL, PLATFORM_ARCH, ENABLE_EDITOR, ENABLE_DASHBOARD, OCI_IMAGE_CACHE, FRAME_ANCESTORS, ENABLE_DOCKER, LC_CTYPE, CLARITY_TRACKING_ID, KUBERNETES_SERVICE_PORT_HTTPS, SPR_BRASB_W10_S3246_SERVICE_HOST, SHLVL, ENABLE_FILES, SESSION_NAME, ENABLE_CONSOLE_KUBERNETES, EDITOR_URL, SUPERVISOR_ONLY, ENABLE_WEBDAV, KUBERNETES_PORT, SESSION_HOSTNAME, HISTSIZE, JAVA_HOME, ENABLE_VCLUSTER, ENABLE_WEBDAV_PROCESS, TERM, SESSION_COOKIE_DOMAIN, SERVICES_PASSWORD, ENVIRONMENT_NAME, POLICY_NAME, SPR_BRASB_W10_S3245_PORT, TERMINAL_ONLY, INGRESS_CLASS, TERMINAL_SESSION_ID, SPR_BRASB_W10_S3245_SERVICE_PORT, LESSON_LABEL, KUBERNETES_PORT_443_TCP_ADDR, ENABLE_WORKSHOP, DISTTAG, KUBERNETES_PORT_443_TCP_PROTO, SLIDES_DIR, ENABLE_UPLOADS, ENABLE_CONSOLE, SPR_BRASB_W10_S3245_PORT_80_TCP_ADDR, ENABLE_GATEWAY, ENABLE_SSHD, AMPLITUDE_TRACKING_ID, ENABLE_GIT_PROCESS, ASSETS_REPOSITORY, CLUSTER_DOMAIN, SESSION_ID, CONFIG_PASSWORD, POLICY_ENGINE, WORKSHOP_NAMESPACE, ENABLE_SSHD_PROCESS, SPR_BRASB_W10_S3246_PORT_80_TCP_PROTO, ENABLE_EXAMINER, MAIL, TERMINAL_LAYOUT, DEFAULT_NAMESPACE, LOGNAME, SPR_BRASB_W10_S3245_SERVICE_PORT_80_TCP, GATEWAY_PORT, KUBERNETES_PORT_443_TCP, ENABLE_TERMINAL, FGC, SPR_BRASB_W10_S3245_SERVICE_HOST, SPR_BRASB_W10_S3245_PORT_80_TCP_PROTO, AUTH_USERNAME, WORKSHOP_PORT, OLDPWD, SUPERVISOR_SERVER_URL, RESTART_URL, SPR_BRASB_W10_S3246_SERVICE_PORT_80_TCP, SUPERVISOR_PROCESS_NAME, SUPERVISOR_GROUP_NAME, DEBUGINFOD_URLS, M2_HOME, ENABLE_CONSOLE_KUBERNETES_PROCESS, GOOGLE_TRACKING_ID, SPR_BRASB_W10_S3246_PORT_80_TCP_ADDR, LS_COLORS, LOCAL_RENDERER_TYPE, ENABLE_COUNTDOWN, STORAGE_CLASS, ENABLE_SLIDES, KUBERNETES_SERVICE_HOST, LANG, PORTAL_CLIENT_SECRET, WORKSHOP_LAYOUT, WORKSHOP_NAME, PORTAL_CLIENT_ID, AUTH_PASSWORD, SPR_BRASB_W10_S3246_PORT_80_TCP_PORT, INGRESS_PROTOCOL, SPR_BRASB_W10_S3245_PORT_80_TCP_PORT, ENABLE_CONSOLE_OCTANT_PROCESS, NODE_PATH, ENABLE_EDITOR_PROCESS, IMAGE_REPOSITORY, ENABLE_WORKSHOP_PROCESS, PORTAL_API_URL, KUBERNETES_API_URL, USER, XDG_CONFIG_HOME, KUBERNETES_SERVICE_PORT, HOSTNAME, EDITOR_PORT, WORKSHOP_ONLY, KUBERNETES_PORT_443_TCP_PORT, SESSION_NAMESPACE, SPR_BRASB_W10_S3246_PORT, WORKSHOP_VERSION, HOME, WORKSHOP_RENDERER, PORTAL_URL]
+2024-12-08T20:49:31.216+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2024-12-08T20:49:31.216+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 22957). The daemon log file: /home/eduk8s/.gradle/daemon/8.3/daemon-22957.out.log
+2024-12-08T20:49:31.217+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting 3rd build in daemon [uptime: 2 mins 3.555 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 16% of 384 MiB]
+2024-12-08T20:49:31.217+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2024-12-08T20:49:31.218+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=fa9369d9-d28a-4970-a7f1-47a7cf2654c8,javaHome=/opt/java,daemonRegistryDir=/home/eduk8s/.gradle/daemon,pid=22957,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+
+CashCardApplicationTests STANDARD_OUT
+    20:49:33.369 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [example.cashcard.CashCardApplicationTests]: CashCardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+    20:49:33.508 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration example.cashcard.CashCardApplication for test class example.cashcard.CashCardApplicationTests
+----- End of the daemon log -----
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Gradle build daemon disappeared unexpectedly (it may have been killed or may have crashed)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+> Task :test
+
+CashCardApplicationTests STANDARD_OUT
+    20:49:33.369 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [example.cashcard.CashCardApplicationTests]: CashCardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+    20:49:33.508 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration example.cashcard.CashCardApplication for test class example.cashcard.CashCardApplicationTests

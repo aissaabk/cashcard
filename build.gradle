@@ -1,0 +1,59 @@
+plugins {
+	id 'java'
+	id 'application'
+	id 'org.springframework.boot' version '3.3.6'
+	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.openjfx.javafxplugin' version '0.1.0'
+	 id 'org.beryx.jlink' version '3.0.1'
+}
+
+group = 'com.devbelmel'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+javafx {
+    version = "23.0.1"
+    modules = [ 'javafx.controls','javafx.fxml' ]
+}
+jlink {
+    launcher {
+        name = 'CashcardApplication'
+    }
+}
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+		   // Add the two dependencies below
+   implementation 'org.springframework.data:spring-data-jdbc'
+   implementation 'com.h2database:h2'
+   // Add the following dependency
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+test {
+ testLogging {
+     events "passed", "skipped", "failed" //, "standardOut", "standardError"
+     showExceptions true
+     exceptionFormat "full"
+     showCauses true
+     showStackTraces true
+
+     // Change from false to true
+     showStandardStreams = false
+
+ }
+}
+
